@@ -18,10 +18,16 @@
     "lint": "./node_modules/.bin/eslint src",
     "lint:fix": "./node_modules/.bin/eslint src --fix"
   },
-  "husky":{
+  "husky": {
     "hooks": {
       "pre-commit": "npm run lint"
     }
+  },
+  "lint-staged": {
+    "src/**/*.js": [
+      "npm run lint:fix",
+      "git add"
+    ]
   },
   "browserslist": {
     "production": [
@@ -37,6 +43,7 @@
   },
   "devDependencies": {
     "eslint-plugin-react": "^7.19.0",
-    "husky": "^4.2.5"
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.2"
   }
 }
