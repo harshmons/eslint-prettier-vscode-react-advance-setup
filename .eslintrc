@@ -7,27 +7,12 @@
     "parserOptions": {
         "sourceType": "module"
     },
-    "extends": [
-      "eslint:recommended",
-      "plugin:react/recommended"
-    ],
+    "extends": ["eslint:recommended", "plugin:react/recommended", "plugin:prettier/recommended"],
     "rules": {
-        "indent": [
-            "error",
-            2
-        ],
-        "quotes": [
-            "error",
-            "double"
-        ],
-        "semi": [
-            "error",
-            "always"
-        ],
-        "react/jsx-equals-spacing": [
-            2,
-            "never"
-        ],
+        // "indent": ["error", 2],
+        // "quotes": ["error", "double"],
+        // "semi": ["error", "always"],
+        "react/jsx-equals-spacing": [2, "never"],
         "react/jsx-max-props-per-line": [
             2,
             {
