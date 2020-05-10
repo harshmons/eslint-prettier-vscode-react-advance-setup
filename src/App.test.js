@@ -6,6 +6,9 @@ Enzyme.configure({ adapter: new Adapter() });
 const enzymeWrapper = shallow(<App />);
 describe('<App />', () => {
     test('should render successfully', () => {
-        expect(enzymeWrapper).toBeDefined();
+        expect(enzymeWrapper).toHaveLength(1);
+    });
+    test('should have b tag with value as Sample tag', () => {
+        expect(enzymeWrapper.find('b').text()).toBe('Sample tag');
     });
 });

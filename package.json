@@ -14,10 +14,10 @@
         "start": "react-scripts start",
         "build": "react-scripts build",
         "test": "react-scripts test",
+        "test:staged": "cross-env CI=true react-scripts test --findRelatedTests",
         "eject": "react-scripts eject",
         "lint": "./node_modules/.bin/eslint src",
-        "lint:fix": "./node_modules/.bin/eslint src --fix",
-        "prettier": "prettier . --write"
+        "lint:fix": "./node_modules/.bin/eslint src --fix"
     },
     "husky": {
         "hooks": {
@@ -28,6 +28,7 @@
         "src/**/*.js": [
             "eslint --fix",
             "prettier --write",
+            "npm run test:staged",
             "git add"
         ]
     },
@@ -44,6 +45,7 @@
         ]
     },
     "devDependencies": {
+        "cross-env": "^7.0.2",
         "enzyme": "^3.11.0",
         "enzyme-adapter-react-16": "^1.15.2",
         "eslint-config-prettier": "^6.11.0",
