@@ -5,7 +5,8 @@
         "jest": true
     },
     "parserOptions": {
-        "sourceType": "module"
+        "sourceType": "module",
+        "ecmaVersion": 2018 /* This enables all the ES6 feature. Refer - https://eslint.org/docs/user-guide/migrating-to-5.0.0#the-experimentalobjectrestspread-option-has-been-deprecated */
     },
     "extends": ["eslint:recommended", "plugin:react/recommended", "plugin:prettier/recommended"],
     "rules": {
